@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:45:53 by ropkyns           #+#    #+#             */
-/*   Updated: 2024/01/08 17:46:57 by ropkyns          ###   ########.fr       */
+/*   Updated: 2024/01/09 16:37:05 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int	ft_print_char(char c)
 {
-	int value_char;
-	
+	int	value_char;
+
 	value_char = write(1, &c, 1);
 	return (value_char);
 }
 
 int	ft_print_str(char *str)
 {
-	int value_str;
-	
+	int	value_str;
+
 	if (!str)
 	{
 		write(1, "(null)", 6);
@@ -35,7 +35,7 @@ int	ft_print_str(char *str)
 
 int	ft_print_ptr(unsigned long ptr)
 {
-	int value_ptr;
+	int	value_ptr;
 
 	value_ptr = 0;
 	if (ptr == 0)
@@ -59,7 +59,7 @@ void	ft_putptr(unsigned long ptr)
 	}
 	else
 	{
-		if(ptr > 9)
+		if (ptr > 9)
 			ft_putchar((ptr - 10 + 'a'));
 		else
 			ft_putchar((ptr + '0'));
@@ -68,7 +68,7 @@ void	ft_putptr(unsigned long ptr)
 
 int	ft_len_ptr(unsigned long ptr)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (ptr != 0)

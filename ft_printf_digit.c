@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_digit.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:46:16 by ropkyns           #+#    #+#             */
-/*   Updated: 2024/01/08 16:48:37 by ropkyns          ###   ########.fr       */
+/*   Updated: 2024/01/09 16:37:04 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int len_int(int n)
+int	len_int(int n)
 {
-	int value_int;
-	
+	int	value_int;
+
 	value_int = 0;
-	if(n == -2147483648)
+	if (n == -2147483648)
 		return (11);
-	if(n < 0)
+	if (n < 0)
 	{
 		n = -n;
 		value_int++;
@@ -68,9 +68,9 @@ void	ft_putnbr(int n)
 
 int	ft_print_unsigned_int(unsigned int n)
 {
-	int value_unsint;
+	int	value_unsint;
 
-	ft_put_unsigne_nbr(n);
+	ft_put_unsigned_nbr(n);
 	value_unsint = 0;
 	if (n == 0)
 	{
@@ -85,11 +85,11 @@ int	ft_print_unsigned_int(unsigned int n)
 	return (value_unsint);
 }
 
-void	ft_put_unsigne_nbr(unsigned int nb)
+void	ft_put_unsigned_nbr(unsigned int nb)
 {
 	if (nb > 9)
 	{
-		ft_put_unsigne_nbr(nb / 10);
+		ft_put_unsigned_nbr(nb / 10);
 		ft_putchar(nb % 10 + '0');
 	}
 	else

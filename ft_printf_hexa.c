@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 18:31:58 by ropkyns           #+#    #+#             */
-/*   Updated: 2024/01/08 16:45:06 by ropkyns          ###   ########.fr       */
+/*   Updated: 2024/01/09 16:19:09 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_print_hexa(unsigned int hex)
 {
-	int value_hexa;
-	
+	int	value_hexa;
+
 	value_hexa = 0;
 	if (hex >= 16)
 	{
@@ -24,7 +24,7 @@ int	ft_print_hexa(unsigned int hex)
 	}
 	else
 	{
-		if(hex > 9)
+		if (hex > 9)
 			ft_putchar((hex - 10 + 'a'));
 		else
 			ft_putchar((hex + '0'));
@@ -35,8 +35,8 @@ int	ft_print_hexa(unsigned int hex)
 
 int	ft_print_hexa_caps(unsigned int hex)
 {
-	int value_hexa;
-	
+	int	value_hexa;
+
 	value_hexa = 0;
 	if (hex >= 16)
 	{
@@ -45,7 +45,7 @@ int	ft_print_hexa_caps(unsigned int hex)
 	}
 	else
 	{
-		if(hex > 9)
+		if (hex > 9)
 			ft_putchar((hex - 10 + 'A'));
 		else
 			ft_putchar((hex + '0'));
@@ -56,11 +56,11 @@ int	ft_print_hexa_caps(unsigned int hex)
 
 int	ft_len_hexa(unsigned int hex)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (hex == 0)
-		return(1);
+		return (1);
 	while (hex != 0)
 	{
 		len++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:12:57 by ropkyns           #+#    #+#             */
-/*   Updated: 2024/01/08 18:08:36 by ropkyns          ###   ########.fr       */
+/*   Updated: 2024/01/09 16:37:06 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			value += ft_format(str[i+1], args);
+			value += ft_format(str[i + 1], args);
 			i++;
 		}
 		else

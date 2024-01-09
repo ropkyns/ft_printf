@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ropkyns <ropkyns@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulmart <paulmart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:04:28 by ropkyns           #+#    #+#             */
-/*   Updated: 2024/01/08 16:48:55 by ropkyns          ###   ########.fr       */
+/*   Updated: 2024/01/09 16:18:14 by paulmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,13 @@ int		ft_print_str(char *str);
 int		ft_print_ptr(unsigned long ptr);
 void	ft_putptr(unsigned long ptr);
 int		ft_len_ptr(unsigned long ptr);
+int		len_int(int n);
 int		ft_print_int(int n);
 void	ft_putnbr(int n);
 int		ft_print_unsigned_int(unsigned int n);
-void	ft_put_unsigne_nbr(unsigned int nb);
-int	ft_print_hexa(unsigned int hex);
-int	ft_print_hexa_caps(unsigned int hex);
-int	ft_len_hexa(unsigned int hex);
+void	ft_put_unsigned_nbr(unsigned int nb);
+int		ft_print_hexa(unsigned int hex);
+int		ft_print_hexa_caps(unsigned int hex);
+int		ft_len_hexa(unsigned int hex);
 
 #endif
